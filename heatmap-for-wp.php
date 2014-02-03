@@ -1,6 +1,7 @@
 <?php 
 /*
 Plugin Name: heatmap for WordPress
+Plugin URI: http://wordpress.org/plugins/heatmap-for-wp/
 Description: Real-time analytics and event tracking for your WordPress site (see http://heatmap.me)
 Version: 0.2.0
 Author: HeatMap, Inc
@@ -77,8 +78,8 @@ class heatmapWP {
 	}
 	public static function init() {
 		if (!self::$instance) {
-			self::$PLUGIN_DIR = basename(dirname(__FILE__)).DIRECTORY_SEPARATOR;
 			self::$PLUGIN_SLUG = basename(__FILE__, '.php');
+			self::$PLUGIN_DIR = self::$PLUGIN_SLUG.DIRECTORY_SEPARATOR;
 			self::$ACTION_PREFIX = preg_replace('/[^a-z]+/', '_', strtolower(self::$PLUGIN_SLUG)).'_';
 			self::$instance = new self();
 		}
@@ -225,7 +226,7 @@ var heatmap_ext = {
 	},
 	getCurrentURL: function() {
 		return heatmap_ext.cleanupURL(document.location.href);
-	},
+	}
 };
 EXT_DEFAULT
 		);

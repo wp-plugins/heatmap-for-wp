@@ -13,7 +13,8 @@ Real-time analytics and event tracking for your WordPress sites.
 
 heatmap provides realtime analytics and mouse tracking that helps sites editors understand in seconds which are their best performing contents. heatmap is used to optimize the traffic flow on websites and significantly reduce exit rates.
 
-= Key features of [heatmap](http://heatmap.me/) =
+= Key features of heatmap =
+(all details on [heatmap](http://heatmap.me/))
 * realtime analytics, with easy-to-understand heat maps, that are overlaid on your site
 * smart heat maps that support responsive web design and touch devices
 * fully asynchronous tag; no impact on your site's performance
