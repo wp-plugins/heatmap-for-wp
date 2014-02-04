@@ -1,4 +1,4 @@
-=== heatmap for Wordpress - Realtime analytics for your site ===
+=== heatmap for Wordpress - Realtime analytics ===
 Contributors: heatmap
 Tags: analytics, heat map, heatmap, real time, realtime, tracking, click map, mouse map, statistics, funnel, conversion
 Requires at least: 3.1
@@ -23,24 +23,34 @@ heatmap provides realtime analytics and mouse tracking that helps sites editors 
 * https supported
 * full privacy (your users are anonymous)
 * free plan available!
-* __Visit [heatmap's site](http://heatmap.me/) to learn more__
+* __Visit [heatmap.me](http://heatmap.me/) to learn more__
 
 = Key features of the plugin =
 * easy and automatic installation of heatmap's tag
 * no extra load on the database of your wordpress site (no impact on your page speed)
 * compatible with symbolic links if you have lots of websites
-* written and tested by the team behind heatmap
+* written and maintained by the team behind [heatmap](http://heatmap.me/)
 
 == Installation ==
-1. Download the plugin and add it to your sites' plugin
-2. Activate the plugin
-3. Go to the heatmap plugin page to connect your plugin with your account on heatmap.me
+1. Create your account on [heatmap.me](http://heatmap.me/)
+2. Log into your WordPress admin panel and go to the Plugins menu.
+3. Click Add New and search for "heatmap for WordPress".
+4. Click Install Now, then Activate Plugin.
+5. Go to the heatmap plugin page to connect your plugin with your account on heatmap.me
 
 == Frequently Asked Questions ==
 
-**Can I use this plugin without an account on heatmap.me**
+**Do I need an account with heatmap?**
 
-No, this plugin is mostly a wrapper to simplify the installation and the use of HeatMap's technology. Though, there is an upside: we are using powerful servers and technologies to offer a product that would slow down your WordPress sites if we tried to integrate it as a standalone plugin. Plus, there is a free plan, so why bother?
+Yes, but the sign up is easy as you can use your Google or Facebook account to register
+
+In fact, you need to register on [heatmap.me](http://heatmap.me/) as we are using powerful servers and technologies to offer a product that would slow down your WordPress sites if we tried to integrate it as a standalone plugin.
+
+**How much does it cost?**
+
+We have a free plan available to you, with limited features. We also have various paid plans depending on your audience and the number of sites you operate.
+
+[Learn more](http://heatmap.me/#plans-pricing)
 
 **I don't see my clicks when I play with my own site**
 
@@ -48,7 +58,7 @@ To prevent your clicks from polluting your data, the plugin disables the logging
 
 **Does the plugin impact the performance of my site?**
 
-No. Our tag is very small and fully asynchronous. Plus, we set up powerful servers and technologies to collect data (we collect hundreds of millions of clicks per month), crunch them and then, display them to you. Finally, the plugin itself stores its configuration using WordPress core engine, so there is no extra load on your WordPress installation.
+Not a bit. Our tag is very small and fully asynchronous. Plus, we set up powerful servers and technologies to collect data (we collect hundreds of millions of clicks per month), crunch them and then, display them to you. Finally, the plugin itself stores its configuration using WordPress core engine, so there is no extra load on your WordPress installation.
 
 == Changelog ==
 
