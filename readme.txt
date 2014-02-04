@@ -9,6 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Real-time analytics and event tracking for your WordPress sites.
 
+
 == Description ==
 
 heatmap provides realtime analytics and mouse tracking that helps sites editors understand in seconds which are their best performing contents. heatmap is used to optimize the traffic flow on websites and significantly reduce exit rates.
@@ -31,12 +32,14 @@ heatmap provides realtime analytics and mouse tracking that helps sites editors 
 * compatible with symbolic links if you have lots of websites
 * written and maintained by the team behind [heatmap](http://heatmap.me/)
 
+
 == Installation ==
 1. Create your account on [heatmap.me](http://heatmap.me/)
 2. Log into your WordPress admin panel and go to the Plugins menu.
 3. Click Add New and search for "heatmap for WordPress".
 4. Click Install Now, then Activate Plugin.
 5. Go to the heatmap plugin page to connect your plugin with your account on heatmap.me
+
 
 == Frequently Asked Questions ==
 
@@ -46,19 +49,23 @@ Yes, but the sign up is easy as you can use your Google or Facebook account to r
 
 In fact, you need to register on [heatmap.me](http://heatmap.me/) as we are using powerful servers and technologies to offer a product that would slow down your WordPress sites if we tried to integrate it as a standalone plugin.
 
+
 **How much does it cost?**
 
 We have a free plan available to you, with limited features. We also have various paid plans depending on your audience and the number of sites you operate.
 
 [Learn more](http://heatmap.me/#plans-pricing)
 
+
 **I don't see my clicks when I play with my own site**
 
 To prevent your clicks from polluting your data, the plugin disables the logging engine when you are logged in as admin on your own site. You can test with a different browser if you don't believe us ;)
 
+
 **Does the plugin impact the performance of my site?**
 
 Not a bit. Our tag is very small and fully asynchronous. Plus, we set up powerful servers and technologies to collect data (we collect hundreds of millions of clicks per month), crunch them and then, display them to you. Finally, the plugin itself stores its configuration using WordPress core engine, so there is no extra load on your WordPress installation.
+
 
 == Changelog ==
 
