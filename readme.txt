@@ -69,5 +69,8 @@ Not a bit. Our tag is very small and fully asynchronous. Plus, we set up powerfu
 
 == Changelog ==
 
+= 0.2.1 =
+* Minor improvements (wording, layout of settings page)
+
 = 0.2.0 =
 * Initial official version
