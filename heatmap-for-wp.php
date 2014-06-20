@@ -308,7 +308,7 @@ EXT_DEFAULT
 			<?php else: ?>
 				<?php $action = self::$ACTION_PREFIX.'save'; ?>
 				<p>
-					<?php printf(__('While browsing your site, simply use the "%s" button from your admin bar to toggle hetmap\'s sidebar on or off.', self::$PLUGIN_SLUG), $this->get_admin_bar_toggle_button()); ?>
+					<?php printf(__('While browsing your site, simply use the "%s" button from your admin bar to toggle heatmap\'s sidebar on or off.', self::$PLUGIN_SLUG), $this->get_admin_bar_toggle_button()); ?>
 				</p>
 				<p style="margin:0 30px;">
 					<small>
