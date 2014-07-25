@@ -3,7 +3,7 @@
 Plugin Name: heatmap for WordPress
 Plugin URI: http://wordpress.org/plugins/heatmap-for-wp/
 Description: Real-time analytics and event tracking for your WordPress site (see http://heatmap.me)
-Version: 0.2.1
+Version: 0.2.2
 Author: HeatMap, Inc
 Author URI: http://heatmap.me
 License: GPL2
@@ -151,7 +151,7 @@ class heatmapWP {
 <script type="text/javascript">
 <?php if ($this->get_option('ext_use')) echo $this->get_option('ext_code'); ?>
 <?php if (is_admin_bar_showing()): ?>
-top.heatmap_ext=top.heatmap_ext||{};top.heatmap_ext.logDisabled=true;
+window.heatmap_ext=window.heatmap_ext||{};window.heatmap_ext.recordDisabled=true;
 <?php endif; ?>
 (function() {
 var hm = document.createElement('script'); hm.type ='text/javascript'; hm.async = true;
@@ -331,7 +331,7 @@ EXT_DEFAULT
 						<td>
 							<label for="heatmap_ext_checkbox">
 								<input id="heatmap_ext_checkbox" type="checkbox" name="ext_use" value="1" <?php if ($this->get_option('ext_use')) echo 'checked'; ?>>
-								<?php _e('Use Javascript advanced customization', self::$PLUGIN_SLUG) ?> <small>(<a href="javascript:alert('Sorry, but we are working on writing a comprehensive documentation...\n\nIn the meantime, contact our support for questions!');"><?php _e('documentation', self::$PLUGIN_SLUG) ?></a>)</small>
+								<?php _e('Use Javascript advanced customization', self::$PLUGIN_SLUG) ?> <small>(<a href="http://heatmap.me/docs/tech/heatmap_ext" target="_blank"><?php _e('documentation', self::$PLUGIN_SLUG) ?></a>)</small>
 							</label>
 						</td>
 					</tr>
