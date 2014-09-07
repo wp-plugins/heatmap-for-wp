@@ -2,14 +2,14 @@
 /*
 Plugin Name: heatmap for WordPress
 Plugin URI: http://wordpress.org/plugins/heatmap-for-wp/
-Description: Real-time analytics and event tracking for your WordPress site (see http://heatmap.me)
-Version: 0.2.2
+Description: Real-time analytics and event tracking for your WordPress site (see https://heatmap.me)
+Version: 0.3.0
 Author: HeatMap, Inc
-Author URI: http://heatmap.me
+Author URI: https://heatmap.me
 License: GPL2
 */
 /*
-Copyright 2014 - HeatMap, Inc - http://heatmap.me/
+Copyright 2014 - HeatMap, Inc - https://heatmap.me/
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as 
@@ -45,7 +45,9 @@ class heatmapWP {
 	 */
 	private function __construct() {
 		if (is_admin()) {
-			$this->check_account_active(3600);
+			if (!$this->get_option('active')) {
+				$this->check_account_active(3600); // while not active, check every hour
+			}
 			add_action('admin_menu', array($this, 'admin_menu'));
 			if ($this->get_page_type() == 'admin' && false !== stristr($_GET['page'], self::$PLUGIN_SLUG)) {
 				add_action('admin_enqueue_scripts', array($this, 'admin_assets'));
@@ -176,7 +178,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm
 				'u' => get_bloginfo('url'),
 				'callback' => 'wp'
 			);
-			$check_response = wp_remote_get('https://heatmap.it/api/check/account?'.http_build_query($params), array('timeout' => 2, 'sslverify' => false));
+			$check_response = wp_remote_get('https://heatmap.it/api/check/account?'.http_build_query($params), array('timeout' => 10, 'sslverify' => false));
 			$check_result = false;
 			$check_err = '';
 			if (!is_wp_error($check_response)) {
@@ -291,7 +293,7 @@ EXT_DEFAULT
 				<h3>Getting heatmap for your site</h3>
 				<ol>
 					<li>
-						<?php printf(__('Create your account on %s.', self::$PLUGIN_SLUG), '<a href="http://heatmap.me/" target="_blank">http://heatmap.me</a>'); ?>
+						<?php printf(__('Create your account on %s.', self::$PLUGIN_SLUG), '<a href="https://heatmap.me/" target="_blank">https://heatmap.me</a>'); ?>
 						<em><strong><?php _e('Free plan available', self::$PLUGIN_SLUG) ?></strong></em>
 						<br>
 						<?php _e('Easily sign up in less than 2 minutes by using your Facebook or Google account!', self::$PLUGIN_SLUG) ?>
@@ -331,7 +333,7 @@ EXT_DEFAULT
 						<td>
 							<label for="heatmap_ext_checkbox">
 								<input id="heatmap_ext_checkbox" type="checkbox" name="ext_use" value="1" <?php if ($this->get_option('ext_use')) echo 'checked'; ?>>
-								<?php _e('Use Javascript advanced customization', self::$PLUGIN_SLUG) ?> <small>(<a href="http://heatmap.me/docs/tech/heatmap_ext" target="_blank"><?php _e('documentation', self::$PLUGIN_SLUG) ?></a>)</small>
+								<?php _e('Use Javascript advanced customization', self::$PLUGIN_SLUG) ?> <small>(<a href="https://heatmap.me/docs/tech/heatmap_ext" target="_blank"><?php _e('documentation', self::$PLUGIN_SLUG) ?></a>)</small>
 							</label>
 						</td>
 					</tr>

@@ -2,7 +2,7 @@
 Contributors: heatmap
 Tags: analytics, heat map, heatmap, real time, realtime, tracking, click map, mouse map, statistics, funnel, conversion
 Requires at least: 3.1
-Tested up to: 3.9.1
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,17 +24,17 @@ heatmap provides realtime analytics and mouse tracking that helps sites editors 
 * https supported
 * full privacy (your users are anonymous)
 * free plan available!
-* __Visit [heatmap.me](http://heatmap.me/) to learn more__
+* __Visit [heatmap.me](https://heatmap.me/) to learn more__
 
 = Key features of the plugin =
 * easy and automatic installation of heatmap's tag
 * no extra load on the database of your wordpress site (no impact on your page speed)
 * compatible with symbolic links if you have lots of websites
-* written and maintained by the team behind [heatmap](http://heatmap.me/)
+* written and maintained by the team behind [heatmap](https://heatmap.me/)
 
 
 == Installation ==
-1. Create your account on [heatmap.me](http://heatmap.me/)
+1. Create your account on [heatmap.me](https://heatmap.me/)
 2. Log into your WordPress admin panel and go to the Plugins menu.
 3. Click Add New and search for "heatmap for WordPress".
 4. Click Install Now, then Activate Plugin.
@@ -47,14 +47,14 @@ heatmap provides realtime analytics and mouse tracking that helps sites editors 
 
 Yes, but the sign up is easy as you can use your Google or Facebook account to register
 
-In fact, you need to register on [heatmap.me](http://heatmap.me/) as we are using powerful servers and technologies to offer a product that would slow down your WordPress sites if we tried to integrate it as a standalone plugin.
+In fact, you need to register on [heatmap.me](https://heatmap.me/) as we are using powerful servers and technologies to offer a product that would slow down your WordPress sites if we tried to integrate it as a standalone plugin.
 
 
 **How much does it cost?**
 
 We have a free plan available to you, with limited features. We also have various paid plans depending on your audience and the number of sites you operate.
 
-[Learn more](http://heatmap.me/#plans-pricing)
+[Learn more](https://heatmap.me/#plans-pricing)
 
 
 **I don't see my clicks when I play with my own site**
@@ -68,6 +68,11 @@ Not a bit. Our tag is very small and fully asynchronous. Plus, we set up powerfu
 
 
 == Changelog ==
+= 0.3.0 =
+* Increased connection timeout for server side checks
+* heatmap.me is now https
+* Tested on Wordpress 4.0
+
 = 0.2.2 =
 * Minor improvements (new api, link to documentation)
 
