@@ -3,7 +3,7 @@
 Plugin Name: heatmap for WordPress
 Plugin URI: http://wordpress.org/plugins/heatmap-for-wp/
 Description: Real-time analytics and event tracking for your WordPress site (see https://heatmap.me)
-Version: 0.3.0
+Version: 0.3.1
 Author: HeatMap, Inc
 Author URI: https://heatmap.me
 License: GPL2
@@ -178,17 +178,25 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm
 				'u' => get_bloginfo('url'),
 				'callback' => 'wp'
 			);
-			$check_response = wp_remote_get('https://heatmap.it/api/check/account?'.http_build_query($params), array('timeout' => 10, 'sslverify' => false));
+			if (defined('WP_HEATMAP_AFFILIATEID')) {
+				$params['aff'] = WP_HEATMAP_AFFILIATEID;
+			}
+			$check_url = '//heatmap.it/api/check/account?'.http_build_query($params);
+			$check_response = wp_remote_get('https:'.$check_url, array('timeout' => 10, 'sslverify' => false));
 			$check_result = false;
 			$check_err = '';
-			if (!is_wp_error($check_response)) {
+			if (is_wp_error($check_response)) {
+				// fallback to http
+				$check_response = wp_remote_get('http:'.$check_url, array('timeout' => 10));
+			}
+			if (is_wp_error($check_response)) {
+				$check_err = $check_response->get_error_message();
+			} else {
 				$json_result = trim(preg_replace(array('/[\n\r]/', '/^wp/'), array('', ''), $check_response['body']), '();');
 				$check_result = json_decode($json_result, true);
 				if (!is_array($check_result) || !array_key_exists('active', $check_result)) {
 					$check_err = 'cannot parse jsonp response '.print_r($json_result,true);
 				}
-			} else {
-				$check_err = $check_response->get_error_message();
 			}
 			$options_new_values = array(
 				'active_last_check' => time(),

@@ -68,6 +68,10 @@ Not a bit. Our tag is very small and fully asynchronous. Plus, we set up powerfu
 
 
 == Changelog ==
+= 0.3.1 =
+* Server side check falls back to http if only older SSL protocols are supported
+* Support for affiliates
+
 = 0.3.0 =
 * Increased connection timeout for server side checks
 * heatmap.me is now https
